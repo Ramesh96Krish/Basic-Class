@@ -1,0 +1,9 @@
+Task of day 2
+
+Diff Between Document and Window Object
+
+Window Object is the topmost Object of the browser and it is a part of BOM
+Document Object is the Object of the Server Content and it is a part of the Window property
+Window Object represent the Window of the Browser whereas the Document Object represent the contents of the HTMLpage that has been loaded
+Window object is the Global Object and the Document object is the part of the Window Object
+Window object is the object that gets loaded while loading a webpage and it is for the browser, whereas the Document object is for the HTML Content, which gets manipulated based on the content.
