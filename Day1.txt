@@ -3,6 +3,7 @@ Task of Day 1
 QN:1  
 Difference B/w HTTP 1.1 Vs HTTP 2
 HTTP is called Hypertext transport Protocol, and this is set of Transfer Protocols that are used by Browser to Server for Request/Response to a server, HTTP were optimised from Http to HTTPS today,
+
 HTTP 1.1:
 It is the most famous Http method used for almost many years i.e., 15 years and it transfers the request and gets a response only 
 it sents all the request in one TCP but if one request fails to return response all the other request were stopped.
@@ -11,15 +12,18 @@ It compreses the data by itself and loads the whole response and its data
 
 HTTP 2:
 It removes most of the flaws of HTTP1.1
-It sents multiple request in one TCP by using the Multiplexing technique,where you would get a response even though the head got failed or blocked
+It sents multiple request in one TCP by using the Multiplexing technique,where you would get a response even though the head got failed or blocked (Multiplexing- Several Request in one TCP)
 It sents the data in the form of Binary model
-It uses the Priorisation technique to load the server at faster rate 
-it compreses the data by HCPACK
+It uses the Prioritization and has control over the prioritization to load the server at faster rate 
+it compresSes the data by HCPACK, and uses the Push Frame to retrive the Data's.
+
+HTTP 3 uses the QUIC protocol(formed by Google).
 
 QN:2
-Object is the type of Datatype that has been used to store the datas of different Data's 
+Object is the type of Data structures that has been used to store the datas of different Datatype. 
+Object comprises of the property and Value. moreover it is called as the key, value pair. 
 Object is enclosed in {}
 syntax:
 Let o= {Attribute_Name1:'value',Attribute_name2:'value'};
 
-Objects, arrays can be enclosed in a Object and moreover the objects individual values are represented using the dot notation
+Objects, arrays can be enclosed in a Object and moreover the objects individual values are represented using the dot notation.
