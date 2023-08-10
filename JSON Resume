@@ -1,0 +1,20 @@
+let Resume={
+Name:'Ramesh Krishnan',
+ContactNo:'8220080388',
+Address:{
+CrAd:'Chennai',
+PrAd:'Trichy'
+},
+HighestDegree: 'PGDM (Marketing)',
+Project: 'Effect of IOT in Coimbatore SMART City',
+Internship:'Brand Management for Aura Illumination',
+WorkExper: '2 year',
+Currentemp:'Sundaram home finance ltd',
+Currentrole:'Assitant Manager-Marketing',
+Certification:'Google digital Unlocked, Google Analytics, Hubspot, SM Study',
+Tools:'Excel, SPSS, Tableau, R',
+Specialization:'Inbound Marketing, Marketing Analytics, Brand Management,Content Marketing, Market Research',
+Hobbies:'Doing Sports, Culinary practices, playing with pets'
+};
+let s= JSON.stringify(Resume);
+console.log(s);
