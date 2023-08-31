@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>API Restcountries Hitting</h1>
+    <script>
+        var http=new XMLHttpRequest(); // Creating an Instance / Object
+        http.open("GET","https://restcountries.com/v3.1/all");
+        http.send();// sending request to API
+        //GETTING RESPONSE OR ERROR FROM THE API
+        http.onload = () => {
+            if(http.status === 200){
+                console.log("Request Success,");
+                var restcountries= JSON.parse(http.response);
+                console.log("RestCountries, ", restcountries);
+                const CountriesInAsia=restcountries.filter((country) =>{
+                    if(country.region==="Asia"){
+                        return true;
+                    }
+                });
+                console.log("Countries in Asia:", CountriesInAsia);
+                var LessPopulatedCountries=restcountries.filter((country)=>{
+                    if(country.population<200000)
+                    {
+                    return true;
+                    }
+                });
+                console.log("Less Populated Countries:", LessPopulatedCountries);
+                restcountries.forEach((country) => {
+                    console.log("Name : ", country.name.official);
+                    console.log("Capital :", country.capital);
+                    console.log("Flags : ",country.flags.png);
+                }); 
+                const TotalPopulation=restcountries.reduce((accumulator,currentvalue) =>currentvalue.population+accumulator,0) 
+                console.log("Totalpopulation, ", TotalPopulation)    
+                const UsdCurrencyCountries=restcountries.filter((country) =>{
+                    if(country.currencies === "USD"){
+                        return true;
+                    }
+                });
+                console.log("Countries with USD :", UsdCurrencyCountries);
+        }
+            else
+            console.log('Unsuccessful');  
+            };      
+    </script>
+</body>
+</html>
